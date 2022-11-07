@@ -26,7 +26,7 @@ public class MostrarProductos extends javax.swing.JDialog {
         this.setLocationRelativeTo(null);
         TablaMostrarProductos.setModel(new ProductosTableModel(Logica.getListaProductos()));
         filtro();
-        setIconImage(new ImageIcon(getClass().getResource("/Imagenes/Overwatch.png")).getImage());
+        setIconImage(new ImageIcon(getClass().getResource("/Imagenes/Icono.png")).getImage());
     }
     private void filtro(){
         //Creamos el filtro
@@ -124,15 +124,15 @@ public class MostrarProductos extends javax.swing.JDialog {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 512, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BotonCerrar))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(BotonFiltrar)
-                .addGap(18, 18, 18)
-                .addComponent(TextFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 512, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BotonCerrar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(BotonFiltrar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(TextFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -165,21 +165,7 @@ public class MostrarProductos extends javax.swing.JDialog {
     }//GEN-LAST:event_BotonFiltrarActionPerformed
 
 
-    public static void main(String args[]) {
- 
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                MostrarProductos dialog = new MostrarProductos(new javax.swing.JDialog(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
-            }
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotonCerrar;

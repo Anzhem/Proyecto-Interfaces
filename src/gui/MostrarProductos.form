@@ -31,8 +31,9 @@
                       <Component id="BotonCerrar" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                       <Component id="BotonFiltrar" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="TextFiltro" min="-2" pref="144" max="-2" attributes="0"/>
                   </Group>
               </Group>
