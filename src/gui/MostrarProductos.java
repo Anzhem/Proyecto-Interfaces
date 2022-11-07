@@ -6,12 +6,8 @@ import dto.Productos;
 import gui.TableModel.ProductosTableModel;
 import java.awt.Graphics;
 import java.awt.Image;
-import java.util.ArrayList;
-import java.util.List;
-import javax.swing.ImageIcon;
-import javax.swing.JPanel;
-import javax.swing.RowFilter;
-import javax.swing.RowSorter;
+import java.util.*;
+import javax.swing.*;
 import javax.swing.RowSorter.SortKey;
 import javax.swing.SortOrder;
 import javax.swing.table.DefaultTableModel;
@@ -20,7 +16,7 @@ import javax.swing.table.TableRowSorter;
 
 public class MostrarProductos extends javax.swing.JDialog {
 
- 
+    //Colocamos imagen el estilo de la tabla el posicionamiento del gui y el icono
     ImagenFondo imagen = new ImagenFondo();
     private TableRowSorter<ProductosTableModel> sorter;
     public MostrarProductos(java.awt.Dialog parent, boolean modal) {
@@ -33,6 +29,7 @@ public class MostrarProductos extends javax.swing.JDialog {
         setIconImage(new ImageIcon(getClass().getResource("/Imagenes/Overwatch.png")).getImage());
     }
     private void filtro(){
+        //Creamos el filtro
         ProductosTableModel ptm = new ProductosTableModel(Logica.getListaProductos());
         TablaMostrarProductos.setModel(ptm);
         
@@ -45,7 +42,7 @@ public class MostrarProductos extends javax.swing.JDialog {
     }
     
    
-    
+// Otra forma de realizar la tabla    
 //    private void llamartabla(){
 //        
 //        DefaultTableModel modelo = new DefaultTableModel();
@@ -136,7 +133,7 @@ public class MostrarProductos extends javax.swing.JDialog {
                 .addComponent(BotonFiltrar)
                 .addGap(18, 18, 18)
                 .addComponent(TextFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,7 +144,7 @@ public class MostrarProductos extends javax.swing.JDialog {
                     .addComponent(BotonFiltrar))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 456, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 23, Short.MAX_VALUE)
+                .addGap(23, 23, 23)
                 .addComponent(BotonCerrar)
                 .addContainerGap(11, Short.MAX_VALUE))
         );
@@ -156,11 +153,12 @@ public class MostrarProductos extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotonCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCerrarActionPerformed
-     
+        //Se cierra el panel
         this.dispose();
     }//GEN-LAST:event_BotonCerrarActionPerformed
 
     private void BotonFiltrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonFiltrarActionPerformed
+        //Al darle realiza el filtro
         RowFilter<ProductosTableModel,Integer> rf = RowFilter.regexFilter(TextFiltro.getText(), 0);
         sorter.setRowFilter(rf);
         

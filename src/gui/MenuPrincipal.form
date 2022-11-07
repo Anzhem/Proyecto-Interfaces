@@ -23,31 +23,41 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="BotonEditarProductos" linkSize="1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="BotonMostrarProductos" linkSize="1" min="-2" pref="148" max="-2" attributes="0"/>
+                      <Component id="BotonEditarProductos" pref="188" max="32767" attributes="0"/>
+                      <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
+                      <Component id="BotonMostrarProductos" pref="199" max="32767" attributes="0"/>
                   </Group>
-                  <Component id="CabeceraMenu" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="CabeceraMenu" max="32767" attributes="0"/>
+                      <EmptySpace pref="208" max="32767" attributes="0"/>
+                  </Group>
               </Group>
+              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
+              <Component id="BotonVolverInicio" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="59" max="32767" attributes="0"/>
-              <Component id="CabeceraMenu" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="56" max="32767" attributes="0"/>
+              <EmptySpace pref="111" max="32767" attributes="0"/>
+              <Component id="CabeceraMenu" pref="57" max="32767" attributes="0"/>
+              <EmptySpace pref="74" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="BotonEditarProductos" linkSize="2" alignment="3" min="-2" pref="66" max="-2" attributes="0"/>
-                  <Component id="BotonMostrarProductos" linkSize="2" alignment="3" min="-2" pref="66" max="-2" attributes="0"/>
+                  <Component id="BotonEditarProductos" alignment="3" pref="66" max="32767" attributes="0"/>
+                  <Component id="BotonMostrarProductos" alignment="3" pref="66" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace pref="99" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+              <Component id="BotonVolverInicio" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -85,6 +95,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonMostrarProductosActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="BotonVolverInicio">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Volver al Inicio"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonVolverInicioActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

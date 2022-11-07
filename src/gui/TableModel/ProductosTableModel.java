@@ -8,11 +8,9 @@ import dto.Productos;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
 
-/**
- *
- * @author diort
- */
+//Modelo de la tabla
 public class ProductosTableModel extends AbstractTableModel{
+    //Creamos una lista llamada listaProductos y un array de String
     private List <Productos> listaProducto;
     private String[] columnas= {"Nombre","ID","Precio","Stock","Fecha"};
     
@@ -29,24 +27,25 @@ public class ProductosTableModel extends AbstractTableModel{
     public int getColumnCount() {
         return columnas.length;
     }
-    /*private String Nombre;
-    private String ID;
-    private String Precio;
-    private Integer Stock;
-    private Date Fecha;*/
+    
     
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
         switch(columnIndex){
             case 0:
+                //En el index 0 meterá el nombre
                 return listaProducto.get(rowIndex).getNombre();
             case 1:
+                //En el index 1 meterá el ID
                 return listaProducto.get(rowIndex).getID();
             case 2:
+                //En el index 2 meterá el precio
                 return listaProducto.get(rowIndex).getPrecio();
             case 3:
+                //En el index 3 meterá el Stock
                 return listaProducto.get(rowIndex).getStock();
             case 4:
+                //En el index 4 meterá la Fecha
                 return listaProducto.get(rowIndex).getFecha();
                         
                 

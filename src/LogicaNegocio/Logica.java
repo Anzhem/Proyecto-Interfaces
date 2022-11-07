@@ -19,7 +19,7 @@ import javax.swing.JPanel;
  * @author diort
  */
 public class Logica {
-
+    //Lista de Productos que se usarán para almacenar la tabla
     private static List<Productos> listaProductos = new ArrayList<>();
 
     public static void aniadirProducto(Productos Producto) {
@@ -31,7 +31,10 @@ public class Logica {
     }
 
     public static boolean esNumero(String s) {
+        /*pasamos lo introducido de String a Float si el programa no puede pasarlo
+          a Float retornará false y posteriormente se generará un error.*/
         try {
+            
             Float.parseFloat(s);
         } catch (NumberFormatException ex) {
             
@@ -39,7 +42,9 @@ public class Logica {
         }
         return true;
     }
-
+    
+   
+    //Si el usuario pulsa si el programa acabará. Si no, se cerrará la ventana
     public void SaliendoPrograma() {
         int confirmado = JOptionPane.showConfirmDialog(null, "¿Desea Salir del programa?");
 

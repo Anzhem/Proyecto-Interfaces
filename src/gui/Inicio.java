@@ -1,6 +1,7 @@
 package gui;
 
 import LogicaNegocio.Logica;
+
 import java.awt.Graphics;
 import java.awt.Image;
 import javax.swing.ImageIcon;
@@ -9,12 +10,17 @@ import javax.swing.JPanel;
 
 public class Inicio extends javax.swing.JFrame {
 
+    //Variables globales
     String user = "admin";
     String pswrd = "contraseña";
     Logica log = new Logica();
+
     ImagenFondo imagen = new ImagenFondo();
 
     public Inicio() {
+        /*Al iniciar el programa cargará la imagen,su posición se centrará,colocará
+          El Icono y por último se iniciará
+        */
         this.setContentPane(imagen);
         initComponents();
         this.setLocationRelativeTo(null);
@@ -68,6 +74,8 @@ public class Inicio extends javax.swing.JFrame {
 
         CampoContrasenia.setBackground(new java.awt.Color(204, 204, 204));
 
+        Registro.setBackground(new java.awt.Color(153, 153, 153));
+        Registro.setForeground(new java.awt.Color(60, 63, 65));
         Registro.setText("Registrarse");
         Registro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,36 +88,38 @@ public class Inicio extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(BotonSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(301, 301, 301)
-                .addComponent(BotonEnviar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(32, 32, 32))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Texto1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(Texto3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Texto2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CampoUsuario)
-                    .addComponent(CampoContrasenia))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addComponent(BotonSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(190, 190, 190)
+                        .addComponent(BotonEnviar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(88, 88, 88)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Texto1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(126, 126, 126))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(Texto3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(Texto2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(CampoUsuario)
+                                    .addComponent(CampoContrasenia))))))
+                .addGap(66, 66, 66))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Registro)
-                .addGap(150, 150, 150))
+                .addGap(182, 182, 182)
+                .addComponent(Registro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(188, 188, 188))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(79, Short.MAX_VALUE)
+                .addContainerGap(73, Short.MAX_VALUE)
                 .addComponent(Texto1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                .addGap(51, 51, 51)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Texto2)
                     .addComponent(CampoUsuario))
@@ -117,13 +127,13 @@ public class Inicio extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Texto3)
                     .addComponent(CampoContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addComponent(Registro)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BotonEnviar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(BotonSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addGap(39, 39, 39))
         );
 
         pack();
@@ -132,15 +142,18 @@ public class Inicio extends javax.swing.JFrame {
     private void BotonEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEnviarActionPerformed
 
         //Inicio de sesión
+        //Cogemos el texto introducido en las variables Usuario y Contrasenia
         String Usuario = CampoUsuario.getText();
         var userPWord = CampoContrasenia.getPassword();
         String Contrasenia = String.valueOf(userPWord);
-
+        
+        //Si el usuario y contraseña coinciden se abre el menu principal con la posición null
         if (Usuario.equals(user) && Contrasenia.equals(pswrd)) {
             MenuPrincipal mp = new MenuPrincipal(this, true);
             mp.setVisible(true);
             mp.setLocationRelativeTo(null);
         } else {
+            //Si no, Mensaje de error.
             JOptionPane.showMessageDialog(null, "Si aún no tiene una cuenta registrese.");
 
         }
@@ -149,13 +162,13 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonEnviarActionPerformed
 
     private void BotonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonSalirActionPerformed
-
+        //Llamamos al metodo SaliendoPrograma de Logica
         log.SaliendoPrograma(); //Salimos del programa
     }//GEN-LAST:event_BotonSalirActionPerformed
 
     private void RegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistroActionPerformed
-        user = JOptionPane.showInputDialog(null, "Introduzca el Usuario");
-        pswrd = JOptionPane.showInputDialog(null, "Introduzca la contraseña");
+        CreacionUsuario();
+
     }//GEN-LAST:event_RegistroActionPerformed
 
     /**
@@ -204,15 +217,26 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel Texto3;
     // End of variables declaration//GEN-END:variables
 
-    class ImagenFondo extends JPanel {// IMAGEN
+    public void CreacionUsuario() {
+        //Para el  registro con dos inputs para crear tu cuenta y contraseña
+
+        user = JOptionPane.showInputDialog(null, "Introduzca el Usuario");
+        pswrd = JOptionPane.showInputDialog(null, "Introduzca la contraseña");
+    }
+
+    public class ImagenFondo extends JPanel {// IMAGEN
 
         private Image imagen;
 
         @Override
         public void paint(Graphics g) {
+            //Con ImageIcon introducimos la imagen pasandole la ruta de la imagen con .getResource y con .getImage()
             imagen = new ImageIcon(getClass().getResource("/Imagenes/FondoPantalla.jpg")).getImage();
+            //Introducimos con drawImage la imagen dandole la ruta,altura,anchura, etc como será introducida.
             g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
+            //Si no ponemos el setOpaque a false la imagen no aparecerá
             setOpaque(false);
+            //por ultimo la dibujamos
             super.paint(g);
         }
     }
