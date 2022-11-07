@@ -24,7 +24,7 @@ public class Inicio extends javax.swing.JFrame {
         this.setContentPane(imagen);
         initComponents();
         this.setLocationRelativeTo(null);
-        setIconImage(new ImageIcon(getClass().getResource("/Imagenes/Overwatch.png")).getImage());
+        setIconImage(new ImageIcon(getClass().getResource("/Imagenes/Icono.png")).getImage());
     }
 
     @SuppressWarnings("unchecked")
